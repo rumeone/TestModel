@@ -3,25 +3,22 @@ from typing import List
 
 def parse_nested_parens(paren_string: str) -> List[int]:
     """Given a string of multiple groups of nested parentheses separated by spaces, 
-    return a list of integers representing the deepest nesting level for each group.
-    
-    Args:
-        paren_string: A string containing groups of parentheses separated by spaces.
-        
-    Returns:
-        A list of integers where each integer is the maximum nesting depth of a group.
+    returns a list of integers representing the deepest nesting level for each group.
     """
     groups = paren_string.split()
     result = []
     for group in groups:
-        current_depth = 0
-        max_depth = 0
+        current_level = 0
+        max_level = 0
         for char in group:
             if char == '(':
-                current_depth += 1
+                current_level += 1
             elif char == ')':
-                current_depth -= 1
-            if current_depth > max_depth:
-                max_depth = current_depth
-        result.append(max_depth)
+                current_level -= 1
+            else:
+                # This else should not happen because groups are separated by spaces and split removes spaces
+                current_level = 0
+            if current_level > max_level:
+                max_level = current_level
+        result.append(max_level)
     return result

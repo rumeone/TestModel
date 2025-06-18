@@ -11,5 +11,11 @@ def filter_by_substring(strings: List[str], substring: str) -> List[str]:
 
     Returns:
         A list of strings from the input that contain the substring.
+
+    Examples:
+        >>> filter_by_substring([], 'a')
+        []
+        >>> filter_by_substring(['abc', 'bacd', 'cde', 'array'], 'a')
+        ['abc', 'bacd', 'array']
     """
     return [s for s in strings if substring in s]
