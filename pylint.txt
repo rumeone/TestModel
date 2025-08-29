@@ -17,6 +17,8 @@ TEST_MODEL_NO_RULES MARK (DeepSeek-R1-0528-Qwen3-8B-Q5_K_M)
 
 AVG = 4.09
 
+TEST = 3 failed, 39 passed, 1 not completed
+
 ----------------------------------------
 TEST_MODEL_WITH_RULES MARK ((DeepSeek-R1-0528-Qwen3-8B-Q5_K_M))
 0) 7.78//10
@@ -36,6 +38,8 @@ TEST_MODEL_WITH_RULES MARK ((DeepSeek-R1-0528-Qwen3-8B-Q5_K_M))
 14) 3.33/10
 
 AVG = 6.41
+
+TEST = 3 failed, 42 passed
 
 --------------------------------------
 
@@ -57,6 +61,8 @@ TEST_MODEL_GPT_NO_RULES MARK (gpt-oss-20b-Q2)
 14) 7.14
 
 AVG = 6.14
+
+TEST = 3 failed, 39 passed, 1 not completed
 -----------------------------------------
 
 TEST_MODEL_GPT_WITH_RULES MARK (gpt-oss-20b-Q2)
@@ -77,3 +83,5 @@ TEST_MODEL_GPT_WITH_RULES MARK (gpt-oss-20b-Q2)
 14) 7.5
 
 AVG = 8.13
+
+TEST = 3 failed, 42 passed
